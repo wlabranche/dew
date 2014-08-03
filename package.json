@@ -16,7 +16,5 @@
     "url": "https://github.com/wlabranche/cast/issues"
   },
   "homepage": "https://github.com/wlabranche/cast",
-  "devDependencies": {
-    "gulp": "^3.8.7"
-  }
+  "devDependencies": {}
 }
