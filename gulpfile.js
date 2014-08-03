@@ -1,4 +1,4 @@
-var gulp = requrie('gulp');
+var gulp = require('gulp');
 
 gulp.task('test', function(){
   console.log('all tests passed because there are no tests');
