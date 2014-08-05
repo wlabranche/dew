@@ -1,7 +1,7 @@
 {
   "name": "dew",
   "author": "Will LaBranche",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a tool to build files and tests quicker",
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
     "magic"
   ],
   "bin": {
-    "dew": "./bin/dew"
+    "dew": "./bin/dew",
+    "undew": "./bin/undew"
   },
   "dependencies": {},
   "engines": {
