@@ -25,6 +25,7 @@
     "dew": "./bin/dew",
     "undew": "./bin/undew"
   },
+  "preferGlobal": true,
   "dependencies": {},
   "engines": {
     "node": "*"
