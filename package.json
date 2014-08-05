@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/wlabranche/cast/issues"
   },
+  "scripts": {
+    "test": "echo yay"
+  },
   "homepage": "https://github.com/wlabranche/cast",
   "main": "./lib/cast",
   "keywords": [
