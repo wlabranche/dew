@@ -5,6 +5,6 @@ var path = require('path');
 var fs = require('fs');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 
-var cast = require(lib + '/cast.js');
+var dew = require(lib + '/dew.js');
 
-cast();
+dew();

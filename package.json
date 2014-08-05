@@ -1,28 +1,28 @@
 {
-  "name": "cast",
+  "name": "dew",
   "author": "Will LaBranche",
   "version": "0.0.1",
   "description": "a tool to build files and tests quicker",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wlabranche/cast.git"
+    "url": "https://github.com/wlabranche/dew.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wlabranche/cast/issues"
+    "url": "https://github.com/wlabranche/dew/issues"
   },
   "scripts": {
     "test": "echo yay"
   },
-  "homepage": "https://github.com/wlabranche/cast",
-  "main": "./lib/cast",
+  "homepage": "https://github.com/wlabranche/dew",
+  "main": "./lib/dew",
   "keywords": [
     "make",
     "tests",
     "magic"
   ],
   "bin": {
-    "cast": "./bin/cast"
+    "dew": "./bin/dew"
   },
   "dependencies": {},
   "engines": {
