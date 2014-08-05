@@ -1,22 +1,28 @@
 {
   "name": "cast",
-  "version": "0.0.0",
-  "description": "cast ====",
-  "main": "index.js",
-  "scripts": {
-    "test": "gulp"
-  },
+  "author": "Will LaBranche",
+  "version": "0.0.1",
+  "description": "a tool to build files and tests quicker",
   "repository": {
     "type": "git",
     "url": "https://github.com/wlabranche/cast.git"
   },
-  "author": "Will LaBranche",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wlabranche/cast/issues"
   },
   "homepage": "https://github.com/wlabranche/cast",
-  "devDependencies": {
-    "gulp": "^3.8.7"
+  "main": "./lib/cast",
+  "keywords": [
+    "make",
+    "tests",
+    "magic"
+  ],
+  "bin": {
+    "cast": "./bin/cast"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "*"
   }
 }
