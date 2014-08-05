@@ -2,7 +2,7 @@ dew [![NPM](https://nodei.co/npm/dew.png?mini=true)](https://nodei.co/npm/dew/) 
 ====
 
 ```
-npm install -g dew
+npm install dew -g
 ```
 Theoretically, this will build create a file, tests for that file, and add it to other files dependencies (when specified).
 
