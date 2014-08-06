@@ -1,7 +1,7 @@
 {
   "name": "dew",
   "author": "Will LaBranche",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "a tool to build files and tests quicker",
   "repository": {
     "type": "git",
