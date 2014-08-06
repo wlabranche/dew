@@ -1,4 +1,4 @@
-dew [![NPM](https://nodei.co/npm/dew.png?mini=true)](https://nodei.co/npm/dew/) [![Build Status](http://img.shields.io/travis-ci/wlabranche/dew.svg?branch=master&style=flat)](https://travis-ci.org/wlabranche/cast)
+dew [![NPM](https://nodei.co/npm/dew.png?mini=true)](https://nodei.co/npm/dew/) [![Build Status](http://img.shields.io/travis-ci/wlabranche/dew.svg?branch=master&style=flat)](https://travis-ci.org/wlabranche/dew)
 ====
 
 ```
