@@ -4,9 +4,9 @@ dew [![NPM](https://nodei.co/npm/dew.png?mini=true)](https://nodei.co/npm/dew/) 
 ```
 npm install dew -g
 ```
-Theoretically, this will build create a file, tests for that file, and add it to other files dependencies (when specified).
+`dew` creates a file, tests for that file, and add it to other files dependencies (when specified, not yet impletemented).
 
-This is super alpha, I hope to get it running soon.
+This is super alpha, I hope to get it doing more soon.
 
 
 `dew <filename>` will generate a file and a test file for you, basically it's an optimized touch.
