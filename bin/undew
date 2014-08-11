@@ -5,6 +5,6 @@ var path = require('path');
 var fs = require('fs');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 
-var undew = require(lib + '/dew.js').undew;
+var undew = require(lib + '/undew.js');
 
 undew();

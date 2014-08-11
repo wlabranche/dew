@@ -2,7 +2,7 @@
   "name": "dew",
   "author": "Will LaBranche",
   "version": "0.0.5",
-  "description": "a tool to build files and tests quicker",
+  "description": "a tool to quickly build files and tests",
   "repository": {
     "type": "git",
     "url": "https://github.com/wlabranche/dew.git"
