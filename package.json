@@ -1,7 +1,7 @@
 {
   "name": "dew",
   "author": "Will LaBranche",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "description": "a tool to quickly build files and tests",
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   ],
   "bin": {
     "dew": "./bin/dew",
-    "undew": "./bin/undew"
+    "undew": "./bin/undew",
+    "detest": "./bin/detest"
   },
   "preferGlobal": true,
   "dependencies": {},
