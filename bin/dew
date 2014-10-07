@@ -3,38 +3,43 @@
 // dependencies
 var path = require( 'path' ),
     fs = require( 'fs' ),
-    findup = require( 'findup-sync' ),
-    resolve = require( 'resolve' );
+    findup = require( 'findup-sync' );
 // local vars
 var cwd = process.cwd(),
     lib = path.join( path.dirname( fs.realpathSync( __filename ) ), '../lib' ),
     dew = require( lib + '/dew.js' ),
     projectPackage = findup( 'package.json', { cwd: cwd } ),
-    parts, stats, ext, fileName;
+    inputs;
 
+// helpers
 var parseInput = require( lib + '/helpers' ).parseInput;
+
+console.log( path.dirname(require.main.filename) );
 
 if ( process.argv.length < 2 ) {
   console.log( 'specify a file to build' );
 } else {
-  parts = parseInput( process.argv[ 2 ] );
-  fileName = parts.fileName;
-
-  if ( projectPackage ) {
-    stats = require( projectPackage );
-    if ( stats.config && stats.config.dew ) {
-      ext = stats.config.dew.ext;
-    }
-  }
-  if ( !ext && parts.extension ) {
-    ext = parts.extension;
-  } else {
-    ext = 'js';
-  }
-
-  if ( parts.fileName && ext ) {
-    dew( fileName, ext );
-  } else {
-    console.log( 'somehow you did somehthing impossible.. and broke it.' );
-  }
+  inputs = Array.prototype.slice
+    .call( process.argv, 2 )
+    .map( function ( el ){
+      return parseInput( el );
+    })
+    .forEach( function ( input ) {
+      var fileName = input.fileName,
+          stats, ext;
+      if ( projectPackage ) {
+        stats = require( projectPackage );
+        if ( stats.config && stats.config.dew ) {
+          ext = stats.config.dew.ext;
+        }
+      }
+      if ( !ext ) {
+        ext = input.extension;
+      }
+      if ( input.fileName && ext ) {
+        dew( fileName, ext );
+      } else {
+        console.log( 'something went wrong on: ' + fileName );
+      }
+    });
 }
