@@ -1,10 +1,40 @@
 #!/usr/bin/env node
+'use strict';
+// dependencies
+var path = require( 'path' ),
+    fs = require( 'fs' ),
+    findup = require( 'findup-sync' ),
+    resolve = require( 'resolve' );
+// local vars
+var cwd = process.cwd(),
+    lib = path.join( path.dirname( fs.realpathSync( __filename ) ), '../lib' ),
+    dew = require( lib + '/dew.js' ),
+    projectPackage = findup( 'package.json', { cwd: cwd } ),
+    parts, stats, ext, fileName;
 
-"use strict";
-var path = require( 'path' );
-var fs = require( 'fs' );
-var lib = path.join( path.dirname( fs.realpathSync( __filename ) ), '../lib' );
+var parseInput = require( lib + '/helpers' ).parseInput;
 
-var dew = require( lib + '/dew.js' );
+if ( process.argv.length < 2 ) {
+  console.log( 'specify a file to build' );
+} else {
+  parts = parseInput( process.argv[ 2 ] );
+  fileName = parts.fileName;
 
-dew();
+  if ( projectPackage ) {
+    stats = require( projectPackage );
+    if ( stats.config && stats.config.dew ) {
+      ext = stats.config.dew.ext;
+    }
+  }
+  if ( !ext && parts.extension ) {
+    ext = parts.extension;
+  } else {
+    ext = 'js';
+  }
+
+  if ( parts.fileName && ext ) {
+    dew( fileName, ext );
+  } else {
+    console.log( 'somehow you did somehthing impossible.. and broke it.' );
+  }
+}
