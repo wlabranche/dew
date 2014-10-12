@@ -6,13 +6,14 @@ npm install dew -g
 ```
 `dew` creates a file, tests for that file, and add it to other files dependencies (when specified, not yet impletemented).
 
-This is super alpha, I hope to get it doing more soon.
-
 As of now, this only works on javascript and coffeescript files, it defaults to javascript.
 To use make and remove coffeescript files use the full path name.
 
 
 `dew <filename>` will generate a file and a test file for you, basically it's an optimized touch.
+
+You can also use to `dew` on a directory and to build tests/main files for everything inside (including other directories).
+This has the benefit of allow for both tdd and bdd, so write your tests and `dew` the file and it will build the necessary files for you.
 
 `undew <filename>` will remove the file and any tests associated with it.
 
